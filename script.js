@@ -1,16 +1,22 @@
-//declaramos las vaariables
-const circulo = document.getElementById('circulo');
-const texto = document.getElementsByClassName('texto');
-const cambiarEstilo = document.getElementById('cambiar-estilo');
+document.addEventListener("DOMContentLoaded", function() {
+    const circulo = document.getElementById("circulo");
+    const cambiarEstilo = document.getElementById("cambiar-estilo");
 
-//Cambio de color
-circulo.classList.toggle('rojo');
-circulo.classList.toggle('azul');
-circulo.classList.toggle('verde');
+    cambiarEstilo.addEventListener("click", function() {
+        cambiarEstiloCirculo();
+    });
 
+    function cambiarEstiloCirculo() {
+        // Obtener las clases actuales del círculo
+        const clasesActuales = circulo.classList;
 
-// cambiamos el texto
-texto.setAttribute('style', 'font-size: 18px; color: #333;');
-
-// Añadir y remover clases con toggle
-texto.classList.toggle('negrita');
+        // Verificar las clases actuales y cambiar a la siguiente clase de color
+        if (clasesActuales.contains("rojo")) {
+            circulo.className = "azul";
+        } else if (clasesActuales.contains("azul")) {
+            circulo.className = "verde";
+        } else {
+            circulo.className = "rojo";
+        }
+    }
+});
