@@ -1,0 +1,61 @@
+* {
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(46, 44, 44);
+    color: white;
+    padding: 1rem;
+    position: fixed; /* Cambia de 'relative' a 'fixed' */
+    top: 0; /* Añade esta propiedad para fijar el encabezado en la parte superior */
+    width: 100%; /* Asegura que el encabezado ocupe todo el ancho de la página */
+    z-index: 2; /* Ajusta el índice z para que el encabezado esté encima del círculo */
+}
+
+body {
+    background-color: rgb(145, 176, 235);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h3 {
+    z-index: 1;
+}
+
+#circulo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 75px;
+    z-index: -1;
+}
+
+.rojo {
+    background-color: red;
+    color: white;
+}
+
+.azul {
+    background-color: blue;
+    color: white;
+}
+
+.verde {
+    background-color: greenyellow;
+}
+
+
+footer {
+    background-color: rgb(46, 44, 44);
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
